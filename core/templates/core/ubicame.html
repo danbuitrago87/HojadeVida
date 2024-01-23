@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %} <!--extiende por herencia desde la base.html el menu MENU-->
+{% block title %}Ubicame{% endblock%}          <!--ponemos el titulo de la pag web de acuerdo a cada vista-->
+
+{% block background %}{% load static %}{% static 'core/img/luces-bg.jpg' %}{% endblock %}
+
+{% block cabecera%}                         <!--extiende por herencia desde la base.html lo que va en la cabecera-->
+    <h1> Ubícame </h1>
+    <span class="subheading"> </span>
+{% endblock %}                              <!--fin del contenido de la cabecera -->
+
+{% block content %}         <!--inicio del contenido de la pagina  -->
+    <div class="col-lg-4 col-md-4 offset-lg-1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7972.394564133606!2d-76.61083027848427!3d2.4412400120156454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30030554ee777d%3A0xd3194ddf180ab808!2sCentro%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses!2sco!4v1673486063577!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="col-lg-2 col-md-8 mx-auto">
+        <p> Popayán, Cauca, Colombia </p>
+        <p> Email: bitttronics@gmail.com </p>
+    </div>
+{% endblock %}              <!--fin del contenido de la página -->

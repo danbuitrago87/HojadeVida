@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %} <!--extiende por herencia desde la base.html el menu MENU-->
+{% block title %}Portafolio{% endblock%}          <!--ponemos el titulo de la pag web de acuerdo a cada vista-->
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block cabecera%}                         <!--extiende por herencia desde la base.html lo que va en la cabecera-->
+    <h1> Portafolio </h1>
+    <span class="subheading"> Productos y Servicios </span>
+{% endblock %}                              <!--fin del contenido de la cabecera -->
+
+{% block content %}         <!--inicio del contenido de la pagina  -->
+
+    {% for project in projects %}
+
+        <!--PROYECTO-->
+        <div class="row project">  
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{project.image.url}}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{project.title}}</h2>   
+                <p>{{project.description}}</p>
+                <p><a href="{{project.link}}">Más información</a></p>
+            </div>
+        </div>
+ 
+    {% endfor %}
+
+{% endblock %}              <!--fin del contenido de la página -->
+

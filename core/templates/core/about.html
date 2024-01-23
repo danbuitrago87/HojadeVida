@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %} <!--extiende por herencia desde la base.html el menu MENU-->
+{% block title %}About{% endblock %}          <!--ponemos el titulo de la pag web de acuerdo a cada vista-->
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block cabecera %}                         <!--extiende por herencia desde la base.html lo que va en la cabecera-->
+    <h1> Acerca de mi </h1>
+    <span class="subheading"> </span>
+{% endblock %}                              <!--fin del contenido de la cabecera -->
+
+{% block content %}         <!--inicio del contenido de la pagina  -->
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{% static 'core/img/avatar-bg.png' %}" alt="Daniel">
+</div>
+<div class="col-lg-7 col-md-8">
+    <h2 class="section-heading"> Formación y Experiencia </h2> 
+    <p> Ingeniero Físico con fuertes conocimientos en física, quimica, matemáticas, ciencia de materiales y tecnologías de la información. </p> 
+    <p> Experiencia en labor docente en instituciones públicas y privadas de carácter tecnológico. </p> 
+    <p> Desarrollador junior en paginación web y aplicaciones móviles en Android. </p>
+</div>
+{% endblock %}              <!--fin del contenido de la página -->
